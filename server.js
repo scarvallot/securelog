@@ -1,9 +1,17 @@
 require("dotenv").config();
 const express = require("express");
 const sequelize = require("./src/config/database"); // Importar configuración de BD
+const routes = require("./src/routes/index"); //  Importar el enrutador base
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// Middlewares básicos para parsear JSON
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Registrar el enrutador en la aplicación
+app.use("/", routes);
 
 /**
  * Verifica la conexión con MySQL, sincroniza los modelos y, si todo funciona,
