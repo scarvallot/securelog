@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require("express");
-const sequelize = require("./src/config/database"); // Importar configuración de BD
+const { sequelize } = require("./src/models");
 const routes = require("./src/routes/index"); //  Importar el enrutador base
 
 const app = express();
