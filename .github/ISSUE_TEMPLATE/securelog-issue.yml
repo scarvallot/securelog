@@ -15,7 +15,58 @@ body:
       description: "Describe el requerimiento desde la perspectiva del usuario, desarrollador o sistema."
       placeholder: "Como [rol], necesito [acción] para [beneficio/resultado]."
     validations:
+      required: truename: Tarea MVP
+description: Plantilla estructurada para registrar nuevas tareas del Mínimo Producto Viable.
+title: "[MVP] "
+labels: ["MVP"]
+assignees:
+  - scarvallot
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Nueva Tarea MVP
+        Por favor, completa los siguientes campos para registrar una tarea accionable en el backlog de SecureLog.
+  - type: textarea
+    id: user_story
+    attributes:
+      label: "Descripción del Problema (User Story)"
+      description: "Describe el requerimiento desde la perspectiva del usuario, desarrollador o sistema."
+      placeholder: "Como [rol], necesito [acción] para [beneficio/resultado]."
+    validations:
       required: true
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: "Criterios de Aceptación"
+      description: "Lista de checks que deben cumplirse estrictamente para mover la tarea a 'Done'."
+      value: |
+        - [ ] Tarea 1
+        - [ ] Tarea 2
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: "🚀 Solución Propuesta (MVP)"
+      description: "Describe brevemente el enfoque técnico, manteniendo el alcance ajustado a un MVP."
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: "Archivos a Modificar / Crear"
+      description: "Indica las rutas de los archivos clave (ej. src/controllers/authController.js)."
+      render: bash
+    validations:
+      required: false
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: "Contexto Adicional"
+      description: "Agrega dependencias con otros issues, ejemplos de código o enlaces a documentación."
+    validations:
+      required: false
   - type: textarea
     id: acceptance_criteria
     attributes:
