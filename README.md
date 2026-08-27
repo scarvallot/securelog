@@ -1,5 +1,7 @@
 # SecureLog 
 
+## Sistema de registro de eventos seguro en Node.js
+
 [![In Progress](https://img.shields.io/badge/In%20Progress-magenta)](https://github.com/scarvallot/securelog.git)
 
 > Sistema de Control de Acceso y Bitácora Automatizada
